@@ -3,7 +3,7 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 export default makeStyles((theme) => ({
 
     appBar: {
-        padding: '0 10%',
+        padding: '0% 10% 0% 8%',
         backgroundColor: "#FEDBD1",
         position: "fixed",
         color: '#800000',
@@ -98,6 +98,6 @@ export default makeStyles((theme) => ({
         [theme.breakpoints.up('md')]: {
             display: 'none',
         },
-        //  marginLeft:'30%'
     },
+
 }));

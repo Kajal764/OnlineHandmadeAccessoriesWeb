@@ -15,7 +15,7 @@ import ProfileIcon from './ProfileIcon';
 import CartIcon from './CartIcon';
 
 export default function Header() {
-  
+
   const classes = Styles();
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState();
 
@@ -43,7 +43,7 @@ export default function Header() {
       onClose={handleMobileMenuClose}
     >
       <MenuItem>
-        <CartIcon isMobileMenuOpen={isMobileMenuOpen}/>
+        <CartIcon isMobileMenuOpen={isMobileMenuOpen} />
         <p>Cart</p>
       </MenuItem>
       <MenuItem>
