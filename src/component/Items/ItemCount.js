@@ -8,11 +8,11 @@ function ItemCount({ itemCount }) {
     const classes = styles();
 
     return (
-            <Typography component="div" className={classes.itemCountDiv}>
-                <Box fontWeight={500} m={1}>
-                    Accessories  <span className={classes.itemMsg}>({itemCount} items)</span>
-                </Box>
-            </Typography>
+        <Typography component="div" className={classes.itemCountDiv}>
+            <Box fontWeight={500} >
+                Accessories  <span className={classes.itemMsg}>({itemCount} items)</span>
+            </Box>
+        </Typography>
     )
 }
 

@@ -4,12 +4,17 @@ export default makeStyles((theme) => ({
     mainDiv: {
         paddingTop: '75px',
         paddingLeft: '10%',
-        paddingRight: '10%'
+        paddingRight: '10%',
+        justifyContent: "center"
     },
+
     secondComponent: {
         display: 'flex',
         [theme.breakpoints.down('451')]: {
-            flexDirection: "column"
+            flexDirection: "column",
+
         },
+        marginTop: '10px',
+        marginBottom: '20px'
     }
 }))

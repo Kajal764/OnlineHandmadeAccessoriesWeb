@@ -52,7 +52,7 @@ function DropDownList({ sortBaseElement }) {
     }
 
     return (
-        <Box fontWeight={500} m={1}>
+        <Box fontWeight={500} >
             <MuiThemeProvider theme={theme}>
                 <FormControl variant="outlined" className={classes.formControl}>
                     <InputLabel className={classes.inputLabel}>Sort by relevance</InputLabel>
