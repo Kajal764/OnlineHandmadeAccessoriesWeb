@@ -1,4 +1,4 @@
-import React, { useState  } from 'react';
+import React, { useState } from 'react';
 import { Box, Select, MenuItem } from '@material-ui/core';
 import InputLabel from "@material-ui/core/InputLabel";
 import Styles from './styles/DropDownStyle';
@@ -37,13 +37,13 @@ function DropDownList({ sortBaseElement }) {
     });
 
     const sortBy = sortBaseElement.map(element => {
-        return <MenuItem     
+        return <MenuItem
             key={element}
             style={{ cursor: "pointer" }}
             value={element}
         >
-             {element} 
-        </MenuItem> 
+            {element}
+        </MenuItem>
     })
 
     const sortData = event => {
