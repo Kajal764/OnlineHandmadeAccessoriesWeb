@@ -1,17 +1,96 @@
-import React, { useState } from 'react';
+import React, { useState, useReducer } from 'react';
 import ItemCount from './ItemCount';
 import DropDownList from './DropDownList';
 import Styles from './styles/ItemStyle';
 import { Box } from '@material-ui/core';
 import Card from './Card'
+import Third from './Images/Third.png'
+import Second from './Images/Eight.png'
+import First from './Images/Six.png'
+import Fifth from './Images/Fifth.png'
+
+export const DataContext = React.createContext()
+
+const initialState = [
+    {
+
+        image: Third,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+    {
+
+        image: Second,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+    {
+
+        image: First,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+    {
+
+        image: Fifth,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+    {
+
+        image: Fifth,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+    {
+
+        image: First,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+    {
+
+        image: Second,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+    {
+
+        image: Third,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
+
+]
+
+const reducer = (state, action) => {
+    console.log("end")
+}
 
 function Item() {
 
     const [itemCount] = useState(30);
     const [sortBaseElement] = useState(['Price: Low to High', 'Price: High to Low', 'Newest Arrivals'])
-    const [data] = useState([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]);
 
     const classes = Styles()
+
+    const [cardData, dispatch] = useReducer(reducer, initialState);
 
     return (
         <div className={classes.mainDiv}>
@@ -22,7 +101,11 @@ function Item() {
                 <DropDownList sortBaseElement={sortBaseElement} />
 
             </div>
-            <Card className={classes.cardDiv} data={data} />
+
+            <DataContext.Provider value={{ cardData, dispatch }}>
+                <Card className={classes.cardDiv} />
+            </DataContext.Provider>
+
         </div>
 
     )
