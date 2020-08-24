@@ -4,10 +4,9 @@ export default makeStyles((theme) => ({
 
     appBar: {
         padding: '0% 10% 0% 8%',
-        backgroundColor: "#FEDBD1",
+        backgroundColor: '#FEDBD1',
         position: "fixed",
         color: '#800000',
-       
     },
     gridDiv: {
         display: 'flex',
@@ -56,6 +55,7 @@ export default makeStyles((theme) => ({
     inputRoot: {
         color: 'black',
     },
+
     inputInput: {
         padding: theme.spacing(1, 1, 1, 0),
         paddingLeft: `calc(1em + ${theme.spacing(4)}px)`,

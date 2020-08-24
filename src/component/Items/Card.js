@@ -13,7 +13,7 @@ function Card() {
         <div>
             <Grid container className={classes.card} >
                 <Grid item xs={12}>
-                    <Grid container justify="center" spacing={3}>
+                    <Grid container justify="flex-start" spacing={3}>
                         {dataContext.cardData.map((value, index) => (
                             <Grid key={index} item>
                                 <ImageMediaCard value={value} />

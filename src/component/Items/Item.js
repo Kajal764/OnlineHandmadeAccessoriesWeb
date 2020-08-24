@@ -76,6 +76,14 @@ const initialState = [
         rating: '4.5',
         price: '1500'
     },
+    {
+
+        image: Second,
+        title: 'Silk Thread Necklace',
+        type: 'Silk collection',
+        rating: '4.5',
+        price: '1500'
+    },
 
 ]
 
